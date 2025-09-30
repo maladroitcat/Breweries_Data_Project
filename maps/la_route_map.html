@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4a2cb2005306b49ac854a88446a7bade {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4a2cb2005306b49ac854a88446a7bade" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4a2cb2005306b49ac854a88446a7bade = L.map(
+                "map_4a2cb2005306b49ac854a88446a7bade",
+                {
+                    center: [34.0587904419106, -118.25545689478852],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7f444adc5aed93fae7012805db5c4ee7 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7f444adc5aed93fae7012805db5c4ee7.addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var poly_line_f7b61e84e8fee2123dae39eaf0c2acf1 = L.polyline(
+                [[34.11473143, -118.2440377], [34.10656552, -118.2515209], [34.1141508, -118.1807106], [34.064259318212, -118.21606709577], [34.06852346, -118.2220376], [34.06593582, -118.2339922], [34.0646086, -118.2324815], [34.0507711, -118.233179], [34.03638739, -118.2233015], [34.0358529, -118.2227391], [34.03612189, -118.2373618], [34.04505443, -118.2357029], [34.04627065, -118.237715], [34.0464181, -118.2425998], [34.047978, -118.256154], [34.05314634, -118.2562113], [34.0478786, -118.3273271], [34.0730485, -118.3440213], [34.0423497, -118.4704166], [34.01575629, -118.2415609]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var marker_c7347128b8a0c82b17e1d03baffdcedf = L.marker(
+                [34.11473143, -118.2440377],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var icon_c29547db828d3d9c774cd4225b4ac7e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4156e52916450b16a0a76c6a6120dbe8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42e832c45d8c8d555bf21a1f4935a686 = $(`<div id="html_42e832c45d8c8d555bf21a1f4935a686" style="width: 100.0%; height: 100.0%;">Start: Eagle Rock Brewery</div>`)[0];
+                popup_4156e52916450b16a0a76c6a6120dbe8.setContent(html_42e832c45d8c8d555bf21a1f4935a686);
+            
+        
+
+        marker_c7347128b8a0c82b17e1d03baffdcedf.bindPopup(popup_4156e52916450b16a0a76c6a6120dbe8)
+        ;
+
+        
+    
+    
+                marker_c7347128b8a0c82b17e1d03baffdcedf.setIcon(icon_c29547db828d3d9c774cd4225b4ac7e0);
+            
+    
+            var marker_54b3f23b94a99f96ea042401b5ee66fe = L.marker(
+                [34.01575629, -118.2415609],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var icon_2ad933f012043f065efbcd68eda3908c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ce807080b2121f1778d4b35b5e4d72a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1cc852c0005295a02f54ec556a0f956c = $(`<div id="html_1cc852c0005295a02f54ec556a0f956c" style="width: 100.0%; height: 100.0%;">End: Ohana Brewing Co</div>`)[0];
+                popup_0ce807080b2121f1778d4b35b5e4d72a.setContent(html_1cc852c0005295a02f54ec556a0f956c);
+            
+        
+
+        marker_54b3f23b94a99f96ea042401b5ee66fe.bindPopup(popup_0ce807080b2121f1778d4b35b5e4d72a)
+        ;
+
+        
+    
+    
+                marker_54b3f23b94a99f96ea042401b5ee66fe.setIcon(icon_2ad933f012043f065efbcd68eda3908c);
+            
+    
+            var marker_77790416f26d5451fb72217323550731 = L.marker(
+                [34.11473143, -118.2440377],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_d30bea9fa8cea495b8e93520d9f3cc44 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_e062f0d6c9845277485cdca3987dc320 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e5152042faadf70cee43b5799a5fdf9 = $(`<div id="html_1e5152042faadf70cee43b5799a5fdf9" style="width: 100.0%; height: 100.0%;">Eagle Rock Brewery</div>`)[0];
+                popup_e062f0d6c9845277485cdca3987dc320.setContent(html_1e5152042faadf70cee43b5799a5fdf9);
+            
+        
+
+        marker_77790416f26d5451fb72217323550731.bindPopup(popup_e062f0d6c9845277485cdca3987dc320)
+        ;
+
+        
+    
+    
+                marker_77790416f26d5451fb72217323550731.setIcon(div_icon_d30bea9fa8cea495b8e93520d9f3cc44);
+            
+    
+            var marker_67593212e6a47b9e34df3f0f0b0f2b4d = L.marker(
+                [34.10656552, -118.2515209],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_7060db6940423382afa87efff8b45271 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_de571972d82442eec542ee6daa37e027 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_980d0f1897695d16833f68866478d748 = $(`<div id="html_980d0f1897695d16833f68866478d748" style="width: 100.0%; height: 100.0%;">Frogtown Brewery</div>`)[0];
+                popup_de571972d82442eec542ee6daa37e027.setContent(html_980d0f1897695d16833f68866478d748);
+            
+        
+
+        marker_67593212e6a47b9e34df3f0f0b0f2b4d.bindPopup(popup_de571972d82442eec542ee6daa37e027)
+        ;
+
+        
+    
+    
+                marker_67593212e6a47b9e34df3f0f0b0f2b4d.setIcon(div_icon_7060db6940423382afa87efff8b45271);
+            
+    
+            var marker_3efe861d1332ff57ba793d97b3b51220 = L.marker(
+                [34.1141508, -118.1807106],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_5f52420927666f67057f29d1d93d4041 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_a7b1563b84b52f4d611d5b89f7934411 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f13a53d47364ed4dcc8edc9bebec5ac3 = $(`<div id="html_f13a53d47364ed4dcc8edc9bebec5ac3" style="width: 100.0%; height: 100.0%;">Highland Park Brewery</div>`)[0];
+                popup_a7b1563b84b52f4d611d5b89f7934411.setContent(html_f13a53d47364ed4dcc8edc9bebec5ac3);
+            
+        
+
+        marker_3efe861d1332ff57ba793d97b3b51220.bindPopup(popup_a7b1563b84b52f4d611d5b89f7934411)
+        ;
+
+        
+    
+    
+                marker_3efe861d1332ff57ba793d97b3b51220.setIcon(div_icon_5f52420927666f67057f29d1d93d4041);
+            
+    
+            var marker_a913c1c96d0161634ada0ca598c6a2e3 = L.marker(
+                [34.064259318212, -118.21606709577],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_1cc05ecd9a4db48c58d4e88dda718571 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_43fc031a2796edcdfacc7a62b64ee194 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a2ea5b5dae00b3ed88499b73af1d7d76 = $(`<div id="html_a2ea5b5dae00b3ed88499b73af1d7d76" style="width: 100.0%; height: 100.0%;">Benny Boy Brewing</div>`)[0];
+                popup_43fc031a2796edcdfacc7a62b64ee194.setContent(html_a2ea5b5dae00b3ed88499b73af1d7d76);
+            
+        
+
+        marker_a913c1c96d0161634ada0ca598c6a2e3.bindPopup(popup_43fc031a2796edcdfacc7a62b64ee194)
+        ;
+
+        
+    
+    
+                marker_a913c1c96d0161634ada0ca598c6a2e3.setIcon(div_icon_1cc05ecd9a4db48c58d4e88dda718571);
+            
+    
+            var marker_4578038f71cb6a147a6b8f9f55816a7f = L.marker(
+                [34.06852346, -118.2220376],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_143ee1c5cd792b1f663c354f33ab1965 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_e02cb032e00f76c9030a5827533fec77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a60974ee7a54bd513b751b5f4dd73286 = $(`<div id="html_a60974ee7a54bd513b751b5f4dd73286" style="width: 100.0%; height: 100.0%;">Wiretap Brewing Corporation</div>`)[0];
+                popup_e02cb032e00f76c9030a5827533fec77.setContent(html_a60974ee7a54bd513b751b5f4dd73286);
+            
+        
+
+        marker_4578038f71cb6a147a6b8f9f55816a7f.bindPopup(popup_e02cb032e00f76c9030a5827533fec77)
+        ;
+
+        
+    
+    
+                marker_4578038f71cb6a147a6b8f9f55816a7f.setIcon(div_icon_143ee1c5cd792b1f663c354f33ab1965);
+            
+    
+            var marker_c65411c3a47986009546c162afe98a28 = L.marker(
+                [34.06593582, -118.2339922],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_5e7e4f0afce30e0878cb990e0eb98de3 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_7226d64860d12c6a2e791f922fe595aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4c9a2da666ba370c333773e85408400 = $(`<div id="html_f4c9a2da666ba370c333773e85408400" style="width: 100.0%; height: 100.0%;">Highland Park Brewery</div>`)[0];
+                popup_7226d64860d12c6a2e791f922fe595aa.setContent(html_f4c9a2da666ba370c333773e85408400);
+            
+        
+
+        marker_c65411c3a47986009546c162afe98a28.bindPopup(popup_7226d64860d12c6a2e791f922fe595aa)
+        ;
+
+        
+    
+    
+                marker_c65411c3a47986009546c162afe98a28.setIcon(div_icon_5e7e4f0afce30e0878cb990e0eb98de3);
+            
+    
+            var marker_1d80e705b7e88a06f8d9ba8a7fd9bd5e = L.marker(
+                [34.0646086, -118.2324815],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_4b94c642ed46d9451690768d75dea44e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_10f631c7e6c9616bdd7b1cf4554acb24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_109baa41afd4666c1201feee7a956aba = $(`<div id="html_109baa41afd4666c1201feee7a956aba" style="width: 100.0%; height: 100.0%;">Homage Brewing</div>`)[0];
+                popup_10f631c7e6c9616bdd7b1cf4554acb24.setContent(html_109baa41afd4666c1201feee7a956aba);
+            
+        
+
+        marker_1d80e705b7e88a06f8d9ba8a7fd9bd5e.bindPopup(popup_10f631c7e6c9616bdd7b1cf4554acb24)
+        ;
+
+        
+    
+    
+                marker_1d80e705b7e88a06f8d9ba8a7fd9bd5e.setIcon(div_icon_4b94c642ed46d9451690768d75dea44e);
+            
+    
+            var marker_d6528d45302b42477cd86c2a9793a228 = L.marker(
+                [34.0507711, -118.233179],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_c9ad5b16523235fd62e748c9cdfb2fa1 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_4ebbbb56eeaa8872c1012fc1b3235959 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cae16540e78c9543fbbe54f4c39c645f = $(`<div id="html_cae16540e78c9543fbbe54f4c39c645f" style="width: 100.0%; height: 100.0%;">Boomtown Brewery</div>`)[0];
+                popup_4ebbbb56eeaa8872c1012fc1b3235959.setContent(html_cae16540e78c9543fbbe54f4c39c645f);
+            
+        
+
+        marker_d6528d45302b42477cd86c2a9793a228.bindPopup(popup_4ebbbb56eeaa8872c1012fc1b3235959)
+        ;
+
+        
+    
+    
+                marker_d6528d45302b42477cd86c2a9793a228.setIcon(div_icon_c9ad5b16523235fd62e748c9cdfb2fa1);
+            
+    
+            var marker_32781e37f8e12bd4f013af18d9475b3b = L.marker(
+                [34.03638739, -118.2233015],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_4fdff8de1ad0b89df124592cf9efde7b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_114a990df566953d2da726dca6ab2866 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d423b948a6bb8534dcc71a665054aba6 = $(`<div id="html_d423b948a6bb8534dcc71a665054aba6" style="width: 100.0%; height: 100.0%;">Dry River Brewing</div>`)[0];
+                popup_114a990df566953d2da726dca6ab2866.setContent(html_d423b948a6bb8534dcc71a665054aba6);
+            
+        
+
+        marker_32781e37f8e12bd4f013af18d9475b3b.bindPopup(popup_114a990df566953d2da726dca6ab2866)
+        ;
+
+        
+    
+    
+                marker_32781e37f8e12bd4f013af18d9475b3b.setIcon(div_icon_4fdff8de1ad0b89df124592cf9efde7b);
+            
+    
+            var marker_4c69db2756f167834df9a628ab662759 = L.marker(
+                [34.0358529, -118.2227391],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_9c97e231507153a5d24efbd83c0e16a4 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_35db029eb664579f5182c8359d640341 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce1a723c2f606d870b0ec2ec5f72be94 = $(`<div id="html_ce1a723c2f606d870b0ec2ec5f72be94" style="width: 100.0%; height: 100.0%;">Indie Brewing Company</div>`)[0];
+                popup_35db029eb664579f5182c8359d640341.setContent(html_ce1a723c2f606d870b0ec2ec5f72be94);
+            
+        
+
+        marker_4c69db2756f167834df9a628ab662759.bindPopup(popup_35db029eb664579f5182c8359d640341)
+        ;
+
+        
+    
+    
+                marker_4c69db2756f167834df9a628ab662759.setIcon(div_icon_9c97e231507153a5d24efbd83c0e16a4);
+            
+    
+            var marker_92d57b447f428389178ea6f7ed5393ab = L.marker(
+                [34.03612189, -118.2373618],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_0d429633c2699e5d47b6ffdee1127e8d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_29aace8c0db06f9fa3e17a70ad7ae8a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71817dc0534da363783b06bab5f72372 = $(`<div id="html_71817dc0534da363783b06bab5f72372" style="width: 100.0%; height: 100.0%;">Iron Triangle Brewing Company</div>`)[0];
+                popup_29aace8c0db06f9fa3e17a70ad7ae8a9.setContent(html_71817dc0534da363783b06bab5f72372);
+            
+        
+
+        marker_92d57b447f428389178ea6f7ed5393ab.bindPopup(popup_29aace8c0db06f9fa3e17a70ad7ae8a9)
+        ;
+
+        
+    
+    
+                marker_92d57b447f428389178ea6f7ed5393ab.setIcon(div_icon_0d429633c2699e5d47b6ffdee1127e8d);
+            
+    
+            var marker_77bcb592839dc0fe9b76791499964650 = L.marker(
+                [34.04505443, -118.2357029],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_a6c7420f5770fa82ff3da21c29c85b70 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_94d969ccf98d14f4fb2f3c628c5e18db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08b4f7bf32d6532fed0f2ea286cd1997 = $(`<div id="html_08b4f7bf32d6532fed0f2ea286cd1997" style="width: 100.0%; height: 100.0%;">Arts District Brewing Company</div>`)[0];
+                popup_94d969ccf98d14f4fb2f3c628c5e18db.setContent(html_08b4f7bf32d6532fed0f2ea286cd1997);
+            
+        
+
+        marker_77bcb592839dc0fe9b76791499964650.bindPopup(popup_94d969ccf98d14f4fb2f3c628c5e18db)
+        ;
+
+        
+    
+    
+                marker_77bcb592839dc0fe9b76791499964650.setIcon(div_icon_a6c7420f5770fa82ff3da21c29c85b70);
+            
+    
+            var marker_bc4bd9a89f13b4d640fd7607fff27010 = L.marker(
+                [34.04627065, -118.237715],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_4153ecd032ea6bd44347760ba4fa0204 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0b49dca887ec347c0f5f6416fac6545e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_861db37368ae886a9cc6b040815d6cbb = $(`<div id="html_861db37368ae886a9cc6b040815d6cbb" style="width: 100.0%; height: 100.0%;">Angel City Brewery</div>`)[0];
+                popup_0b49dca887ec347c0f5f6416fac6545e.setContent(html_861db37368ae886a9cc6b040815d6cbb);
+            
+        
+
+        marker_bc4bd9a89f13b4d640fd7607fff27010.bindPopup(popup_0b49dca887ec347c0f5f6416fac6545e)
+        ;
+
+        
+    
+    
+                marker_bc4bd9a89f13b4d640fd7607fff27010.setIcon(div_icon_4153ecd032ea6bd44347760ba4fa0204);
+            
+    
+            var marker_0d2e8f209d086140db9b859ef29739c9 = L.marker(
+                [34.0464181, -118.2425998],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_2c12f8a4749389029925f1be1baffde1 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_f1a1e014e5fdda35f55869a399d81314 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f59ed3fc518e632668735c9698b6cc25 = $(`<div id="html_f59ed3fc518e632668735c9698b6cc25" style="width: 100.0%; height: 100.0%;">Mumford Brewing Company</div>`)[0];
+                popup_f1a1e014e5fdda35f55869a399d81314.setContent(html_f59ed3fc518e632668735c9698b6cc25);
+            
+        
+
+        marker_0d2e8f209d086140db9b859ef29739c9.bindPopup(popup_f1a1e014e5fdda35f55869a399d81314)
+        ;
+
+        
+    
+    
+                marker_0d2e8f209d086140db9b859ef29739c9.setIcon(div_icon_2c12f8a4749389029925f1be1baffde1);
+            
+    
+            var marker_c8fc33febd6dfb368d62fe8f59c97238 = L.marker(
+                [34.047978, -118.256154],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_a8b2aae32e6fe462a420ca1b67382a2b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_736d8c7c3028db25cc6bb8e6807a3023 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1437540bcc9d0e8105243e383a47daf3 = $(`<div id="html_1437540bcc9d0e8105243e383a47daf3" style="width: 100.0%; height: 100.0%;">Karl Strauss Brewing Co - Downtown Los Angeles</div>`)[0];
+                popup_736d8c7c3028db25cc6bb8e6807a3023.setContent(html_1437540bcc9d0e8105243e383a47daf3);
+            
+        
+
+        marker_c8fc33febd6dfb368d62fe8f59c97238.bindPopup(popup_736d8c7c3028db25cc6bb8e6807a3023)
+        ;
+
+        
+    
+    
+                marker_c8fc33febd6dfb368d62fe8f59c97238.setIcon(div_icon_a8b2aae32e6fe462a420ca1b67382a2b);
+            
+    
+            var marker_62af28068e162dd8a20331cb111934ab = L.marker(
+                [34.05314634, -118.2562113],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_254eebbd0401afc9779b90f34d5bb84d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_920efb34885ef3f9073470fbcded5de9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba03c77124b54cbfcf18214c4acfa70d = $(`<div id="html_ba03c77124b54cbfcf18214c4acfa70d" style="width: 100.0%; height: 100.0%;">Bonaventure Brewing Co</div>`)[0];
+                popup_920efb34885ef3f9073470fbcded5de9.setContent(html_ba03c77124b54cbfcf18214c4acfa70d);
+            
+        
+
+        marker_62af28068e162dd8a20331cb111934ab.bindPopup(popup_920efb34885ef3f9073470fbcded5de9)
+        ;
+
+        
+    
+    
+                marker_62af28068e162dd8a20331cb111934ab.setIcon(div_icon_254eebbd0401afc9779b90f34d5bb84d);
+            
+    
+            var marker_c9ca1e25d15398d3dd4531231b19b691 = L.marker(
+                [34.0478786, -118.3273271],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_3f52c709bc01bed7733f03ec16b30ec1 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_cf32a765840ba0239e2edaa0160e488d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3549a2931b62882badc35fff56f071a = $(`<div id="html_e3549a2931b62882badc35fff56f071a" style="width: 100.0%; height: 100.0%;">The Stalking Horse</div>`)[0];
+                popup_cf32a765840ba0239e2edaa0160e488d.setContent(html_e3549a2931b62882badc35fff56f071a);
+            
+        
+
+        marker_c9ca1e25d15398d3dd4531231b19b691.bindPopup(popup_cf32a765840ba0239e2edaa0160e488d)
+        ;
+
+        
+    
+    
+                marker_c9ca1e25d15398d3dd4531231b19b691.setIcon(div_icon_3f52c709bc01bed7733f03ec16b30ec1);
+            
+    
+            var marker_6c8e304108bb592044a2f8d66b26726c = L.marker(
+                [34.0730485, -118.3440213],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_76d2b3e9a279784eb646d9ad218fdecc = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_8e76481558b6b1876f09edfb83f9d7a0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_502277148f500edbc777aadf1111ecb3 = $(`<div id="html_502277148f500edbc777aadf1111ecb3" style="width: 100.0%; height: 100.0%;">6th and La Brea</div>`)[0];
+                popup_8e76481558b6b1876f09edfb83f9d7a0.setContent(html_502277148f500edbc777aadf1111ecb3);
+            
+        
+
+        marker_6c8e304108bb592044a2f8d66b26726c.bindPopup(popup_8e76481558b6b1876f09edfb83f9d7a0)
+        ;
+
+        
+    
+    
+                marker_6c8e304108bb592044a2f8d66b26726c.setIcon(div_icon_76d2b3e9a279784eb646d9ad218fdecc);
+            
+    
+            var marker_03593afe2a30722314b9e9ce575b1154 = L.marker(
+                [34.0423497, -118.4704166],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_4539733858b6380fecab1534f0bcc0ea = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_740a9f9533c447734cac347c723fdd54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9fdde101178002cfa6a3574c3433416 = $(`<div id="html_d9fdde101178002cfa6a3574c3433416" style="width: 100.0%; height: 100.0%;">Einstok Beer Company</div>`)[0];
+                popup_740a9f9533c447734cac347c723fdd54.setContent(html_d9fdde101178002cfa6a3574c3433416);
+            
+        
+
+        marker_03593afe2a30722314b9e9ce575b1154.bindPopup(popup_740a9f9533c447734cac347c723fdd54)
+        ;
+
+        
+    
+    
+                marker_03593afe2a30722314b9e9ce575b1154.setIcon(div_icon_4539733858b6380fecab1534f0bcc0ea);
+            
+    
+            var marker_47ea932ea3e978c38d70c5fdc44abe0f = L.marker(
+                [34.01575629, -118.2415609],
+                {
+}
+            ).addTo(map_4a2cb2005306b49ac854a88446a7bade);
+        
+    
+            var div_icon_77324a4193dc3e48f69a2ad28fa89566 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 16px;\"\u003e\ud83c\udf7a\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_16c1758373bfa2ea179e523c1e5e4174 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0308abf6bc0855b9e0e66c0b9b198930 = $(`<div id="html_0308abf6bc0855b9e0e66c0b9b198930" style="width: 100.0%; height: 100.0%;">Ohana Brewing Co</div>`)[0];
+                popup_16c1758373bfa2ea179e523c1e5e4174.setContent(html_0308abf6bc0855b9e0e66c0b9b198930);
+            
+        
+
+        marker_47ea932ea3e978c38d70c5fdc44abe0f.bindPopup(popup_16c1758373bfa2ea179e523c1e5e4174)
+        ;
+
+        
+    
+    
+                marker_47ea932ea3e978c38d70c5fdc44abe0f.setIcon(div_icon_77324a4193dc3e48f69a2ad28fa89566);
+            
+</script>
+</html>
